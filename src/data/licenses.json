@@ -5,7 +5,7 @@
         "licenseUrl": "https://github.com/aptabase/aptabase-react-native/raw/master/LICENSE",
         "parents": "neuland"
     },
-    "@babel/runtime@7.26.0": {
+    "@babel/runtime@7.26.7": {
         "licenses": "MIT",
         "repository": "https://github.com/babel/babel",
         "licenseUrl": "https://github.com/babel/babel/raw/master/LICENSE",
@@ -341,7 +341,7 @@
         "licenseUrl": "https://github.com/zoontek/react-native-edge-to-edge/raw/master/LICENSE",
         "parents": "neuland"
     },
-    "react-native-gesture-handler@2.22.0": {
+    "react-native-gesture-handler@2.22.1": {
         "licenses": "MIT",
         "repository": "https://github.com/software-mansion/react-native-gesture-handler",
         "licenseUrl": "https://github.com/software-mansion/react-native-gesture-handler/raw/master/LICENSE",
@@ -359,10 +359,10 @@
         "licenseUrl": "https://github.com/dominicstop/react-native-ios-utilities/raw/master/LICENSE",
         "parents": "neuland"
     },
-    "react-native-mmkv@2.12.2": {
+    "react-native-mmkv@3.2.0": {
         "licenses": "(MIT AND BSD-3-Clause)",
         "repository": "https://github.com/mrousavy/react-native-mmkv",
-        "licenseUrl": "https://github.com/mrousavy/react-native-mmkv/raw/master/LICENSE",
+        "licenseUrl": "https://github.com/mrousavy/react-native-mmkv",
         "parents": "neuland"
     },
     "react-native-pager-view@6.6.1": {
