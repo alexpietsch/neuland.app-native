@@ -33,7 +33,7 @@ const ResultRow: React.FC<{
         <TouchableOpacity
             key={index}
             style={styles.searchRowContainer}
-            onPressOut={() => {
+            onPress={() => {
                 const center = result.item.properties?.center as
                     | Position
                     | undefined

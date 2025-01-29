@@ -901,7 +901,7 @@ const MapScreen = (): React.JSX.Element => {
                     ]}
                 >
                     <Pressable
-                        onPressOut={() => {
+                        onPress={() => {
                             void Linking.openURL(
                                 'https://www.openstreetmap.org/copyright'
                             )

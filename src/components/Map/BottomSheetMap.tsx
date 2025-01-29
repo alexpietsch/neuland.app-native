@@ -7,8 +7,7 @@ import Color from 'color'
 import { type FeatureCollection } from 'geojson'
 import React, { useContext, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Platform, Pressable, Text, View } from 'react-native'
-import { TextInput } from 'react-native'
+import { Platform, Pressable, Text, TextInput, View } from 'react-native'
 import Animated, { type SharedValue } from 'react-native-reanimated'
 import {
     useAnimatedStyle,
@@ -65,14 +64,15 @@ const MapBottomSheet: React.FC<MapBottomSheetProps> = ({
     }
 
     const width = t('misc.cancel').length * 11
-    const IOS_SNAP_POINTS = ['20%', '38%', '87%']
     const DEFAULT_SNAP_POINTS = ['10%', '30%', '92%']
     return (
         <BottomSheet
             ref={bottomSheetRef}
             index={1}
             snapPoints={
-                Platform.OS === 'ios' ? IOS_SNAP_POINTS : DEFAULT_SNAP_POINTS
+                Platform.OS === 'ios'
+                    ? DEFAULT_SNAP_POINTS
+                    : DEFAULT_SNAP_POINTS
             }
             backgroundComponent={BottomSheetBackground}
             animatedPosition={currentPosition}

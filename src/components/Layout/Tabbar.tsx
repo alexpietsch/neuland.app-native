@@ -31,8 +31,8 @@ export default function TabLayout(): React.JSX.Element {
                               .hex()
                     : undefined,
             }}
-            translucent
-            // eslint-disable-next-line react-native/no-inline-styles
+            ignoresKeyboardSafeArea
+            translucent // eslint-disable-next-line react-native/no-inline-styles
             tabLabelStyle={{
                 fontSize: 11,
             }}
