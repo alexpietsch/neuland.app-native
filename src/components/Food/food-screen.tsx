@@ -13,7 +13,6 @@ import {
 import { useTranslation } from 'react-i18next'
 import {
 	Animated,
-	Dimensions,
 	Platform,
 	Pressable,
 	RefreshControl,
@@ -208,7 +207,6 @@ function FoodScreen(): React.JSX.Element {
 		}
 	)
 
-	const screenHeight = Dimensions.get('window').height
 	const scrollY = new Animated.Value(0)
 	const showAllergensBanner =
 		deferredAllergenSelection.length === 1 &&
@@ -265,10 +263,7 @@ function FoodScreen(): React.JSX.Element {
 						{showAllergensBanner && <AllergensBanner scrollY={scrollY} />}
 						<PagerView
 							ref={pagerViewRef}
-							style={{
-								...styles.page,
-								height: screenHeight
-							}}
+							style={styles.page}
 							initialPage={initialPageRef.current}
 							onPageSelected={(e) => {
 								const page = e.nativeEvent.position
