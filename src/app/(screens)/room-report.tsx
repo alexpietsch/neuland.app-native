@@ -5,7 +5,7 @@ import { router, useLocalSearchParams } from 'expo-router'
 import type React from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { ActivityIndicator, Pressable, Text, View } from 'react-native'
+import { ActivityIndicator, KeyboardAvoidingView, Pressable, Text, View } from 'react-native'
 import { ScrollView, TextInput } from 'react-native-gesture-handler'
 import {
 	createStyleSheet,
@@ -72,7 +72,11 @@ export default function RoomReport(): React.JSX.Element {
 		isPending
 
 	return (
-		<ScrollView contentContainerStyle={styles.container}>
+		<KeyboardAvoidingView
+			style={styles.keyboardAvoidingView}
+			behavior="padding"
+		>
+			<ScrollView contentContainerStyle={styles.container}>
 			<View style={styles.contentContainer}>
 				<View style={styles.modalSectionHeaderContainer}>
 					<Text style={styles.header}>{t('pages.rooms.report.title')}</Text>
@@ -147,6 +151,7 @@ export default function RoomReport(): React.JSX.Element {
 				</Text>
 			</View>
 		</ScrollView>
+		</KeyboardAvoidingView>
 	)
 }
 
@@ -163,6 +168,9 @@ const stylesheet = createStyleSheet((theme) => ({
 	container: {
 		backgroundColor: theme.colors.background,
 		padding: theme.margins.page
+	},
+	keyboardAvoidingView: {
+		flex: 1
 	},
 	contentContainer: {
 		justifyContent: 'center',
